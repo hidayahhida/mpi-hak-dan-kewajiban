@@ -1,0 +1,823 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Hak dan Kewajibanku</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito:wght@400;600;700;800&display=swap">
+<style>
+/* Layout: satu kartu besar bergaya kartun di atas bukit hijau. Langkah 1-6 di atas, tombol Lanjut di bawah. Satu tampilan cerah (biru dan hijau) yang sengaja dipilih untuk murid SD. */
+:root{
+  --ink:#0F2F5C; --ink-soft:#3A5A87;
+  --blue:#2E86F0; --blue-deep:#1B5FC4; --sky:#DDF0FF; --sky-2:#BCE0FF;
+  --green:#34B864; --green-deep:#17803F; --mint:#DCF6E5; --mint-2:#B6EACB;
+  --paper:#FFFFFF; --sun:#FFD84D; --warn-bg:#FFF3D1; --warn-ink:#6B4300;
+  --skin:#F2C29B; --skin-2:#D9A072; --hair:#2B1B12; --blush:#F7A8A0;
+  --font-display:'Baloo 2','Trebuchet MS',system-ui,sans-serif;
+  --font-body:'Nunito',system-ui,'Segoe UI',sans-serif;
+  --line:3px solid var(--ink);
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html,body{min-height:100%}
+body{
+  margin:0;background:var(--sky);color:var(--ink);
+  font-family:var(--font-body);font-size:18px;line-height:1.55;
+  padding-block:14px 56px;
+  padding-left:max(16px,env(safe-area-inset-left,0px));
+  padding-right:max(16px,env(safe-area-inset-right,0px));
+  overflow-x:hidden;
+}
+h1,h2,h3,h4{font-family:var(--font-display);line-height:1.15;margin:0;text-wrap:balance;font-weight:800}
+p{margin:0}
+button{font:inherit;color:inherit;cursor:pointer}
+:focus-visible{outline:4px solid var(--blue);outline-offset:3px;border-radius:10px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* ---- ikon & gambar (SVG) ---- */
+.o{stroke:var(--ink);stroke-width:2.5;stroke-linejoin:round;stroke-linecap:round}
+.f-b{fill:var(--blue)}.f-g{fill:var(--green)}.f-w{fill:#fff}.f-y{fill:var(--sun)}
+.f-s{fill:var(--skin)}.f-s2{fill:var(--skin-2)}.f-h{fill:var(--hair)}.f-n{fill:var(--ink)}
+.f-m{fill:var(--mint-2)}.f-sky{fill:var(--sky-2)}.f-bl{fill:var(--blush)}
+.nofill{fill:none}
+.st-w{stroke:#fff;stroke-width:4;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.arm-o{stroke:var(--ink);stroke-width:12;stroke-linecap:round;fill:none}
+.arm-s{stroke:var(--skin);stroke-width:7;stroke-linecap:round;fill:none}
+.arm-s2{stroke:var(--skin-2);stroke-width:7;stroke-linecap:round;fill:none}
+.ic{width:1.5em;height:1.5em;flex:none}
+.ic-s{width:1.15em;height:1.15em;flex:none}
+.ic-l{width:64px;height:64px;flex:none}
+.svgtxt{font-family:var(--font-display);font-weight:800;fill:var(--ink);font-size:17px}
+
+/* ---- latar ---- */
+.scene{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden}
+.cloud{position:absolute;width:130px;height:65px;opacity:.95;animation:drift 38s ease-in-out infinite alternate}
+.cloud.c1{top:7%;left:4%}
+.cloud.c2{top:18%;right:6%;width:100px;animation-duration:30s;animation-direction:alternate-reverse}
+.cloud.c3{top:42%;left:55%;width:80px;animation-duration:46s}
+@keyframes drift{from{transform:translateX(-24px)}to{transform:translateX(40px)}}
+.hills{position:absolute;left:0;right:0;bottom:0;height:200px;width:100%;display:block}
+.hill-school{position:absolute;right:5%;bottom:84px;width:110px;height:110px}
+.hill-house{position:absolute;left:5%;bottom:70px;width:86px;height:86px}
+
+/* ---- kerangka ---- */
+.app{position:relative;z-index:1;max-width:980px;margin:0 auto;display:flex;flex-direction:column;gap:16px}
+.top{display:flex;flex-wrap:wrap;gap:10px 16px;align-items:center;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:10px;min-width:0}
+.brand .ic{width:46px;height:46px}
+.brand strong{font-family:var(--font-display);font-size:1.5rem;font-weight:800}
+.pill{display:inline-flex;align-items:center;gap:8px;background:var(--paper);border:var(--line);border-radius:999px;padding:2px 14px;font-weight:800;font-size:.9rem}
+.steps{list-style:none;margin:0;padding:0;display:flex;gap:6px;justify-content:space-between}
+.steps li{flex:1;min-width:0;display:flex}
+.step{flex:1;min-width:0;display:flex;flex-direction:column;align-items:center;gap:2px;background:none;border:0;padding:2px 0;color:var(--ink)}
+.step .dot{width:38px;height:38px;border-radius:50%;border:var(--line);background:var(--paper);display:grid;place-items:center;font-family:var(--font-display);font-weight:800;font-size:1.05rem;box-shadow:0 3px 0 var(--ink);transition:transform .2s}
+.step .lbl{font-size:.8rem;font-weight:800;line-height:1.1}
+.step.done .dot{background:var(--green);color:#fff}
+.step.on .dot{background:var(--blue-deep);color:#fff;transform:translateY(-2px) scale(1.1)}
+.step:hover .dot{transform:translateY(-2px)}
+@media(max-width:620px){.step .lbl{display:none}.step.on .lbl{display:none}.step .dot{width:34px;height:34px}}
+
+.card{background:var(--paper);border:var(--line);border-radius:28px;box-shadow:0 7px 0 var(--ink);padding:26px}
+.slide{animation:popin .5s cubic-bezier(.2,1.3,.4,1)}
+@keyframes popin{from{opacity:0;transform:translateY(18px) scale(.97)}to{opacity:1;transform:none}}
+@media(max-width:520px){.card{padding:18px;border-radius:22px}}
+.head{display:flex;align-items:center;gap:14px;margin-bottom:16px;flex-wrap:wrap}
+.head h2{font-size:clamp(1.7rem,4.5vw,2.3rem)}
+.head .ic-l{width:56px;height:56px}
+.lead{font-size:1.12rem;max-width:62ch}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border:var(--line);border-radius:999px;padding:10px 24px;font-family:var(--font-display);font-weight:800;font-size:1.2rem;background:var(--paper);color:var(--ink);box-shadow:0 5px 0 var(--ink);transition:transform .12s,box-shadow .12s;min-height:52px}
+.btn:hover{transform:translateY(-2px);box-shadow:0 7px 0 var(--ink)}
+.btn:active{transform:translateY(4px);box-shadow:0 1px 0 var(--ink)}
+.btn:disabled{opacity:.55;cursor:default;transform:none;box-shadow:0 5px 0 var(--ink)}
+.btn-g{background:var(--green-deep);color:#fff}
+.btn-b{background:var(--blue-deep);color:#fff}
+.btn .ic{width:1.2em;height:1.2em}
+.btn.back .ic{transform:scaleX(-1)}
+.nav{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.nav .btn[hidden]{display:none}
+#next{margin-left:auto}
+
+/* ---- slide 1 ---- */
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:24px;align-items:center}
+@media(max-width:760px){.hero{grid-template-columns:1fr}}
+.hero h1{font-size:clamp(2.4rem,7vw,3.8rem);color:var(--blue-deep);margin:10px 0 8px}
+.hero h1 span{color:var(--green-deep)}
+.ident{display:grid;grid-template-columns:auto 1fr;gap:6px 14px;margin:18px 0;padding:14px 16px;background:var(--sky);border:var(--line);border-radius:18px}
+.ident dt{font-weight:800}
+.ident dd{margin:0;min-width:0}
+.field{display:flex;flex-direction:column;gap:6px;margin-bottom:18px}
+.field label{font-weight:800}
+.field input,.field textarea{font:inherit;color:var(--ink);background:#fff;border:var(--line);border-radius:16px;padding:10px 14px;width:100%}
+.field textarea{resize:vertical;min-height:84px}
+.art{position:relative;aspect-ratio:1/1;max-width:100%;background:linear-gradient(var(--sky-2) 0 62%,var(--mint-2) 62% 100%);border:var(--line);border-radius:26px;overflow:hidden}
+.art .school{position:absolute;left:50%;top:6%;width:44%;transform:translateX(-50%)}
+.art .kid{position:absolute;bottom:2%;width:34%;animation:bob 2.6s ease-in-out infinite}
+.art .kid.k1{left:12%}
+.art .kid.k2{right:12%;animation-delay:-1.3s}
+.art .st{position:absolute;width:11%;animation:twinkle 2.4s ease-in-out infinite}
+.art .st.s1{left:10%;top:12%}.art .st.s2{right:10%;top:22%;animation-delay:-.8s}.art .st.s3{left:30%;top:42%;width:8%;animation-delay:-1.6s}
+.art .bag{position:absolute;left:44%;bottom:3%;width:13%}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
+@keyframes twinkle{0%,100%{transform:scale(1) rotate(0)}50%{transform:scale(1.25) rotate(14deg)}}
+
+/* ---- slide 2 ---- */
+.goal{display:flex;gap:16px;align-items:flex-start;background:var(--mint);border:var(--line);border-radius:22px;padding:18px;margin-bottom:18px}
+.goal .kidwrap{width:70px;flex:none}
+.goal .kidwrap svg{width:100%;height:auto;display:block;animation:bob 2.6s ease-in-out infinite}
+.goal h3{font-size:1.3rem;margin-bottom:4px;color:var(--green-deep)}
+.goal p{font-size:1.2rem;font-weight:700}
+.can{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+@media(max-width:720px){.can{grid-template-columns:1fr}}
+.can li{background:var(--sky);border:var(--line);border-radius:20px;padding:16px;display:flex;flex-direction:column;gap:10px;align-items:flex-start}
+.can li:nth-child(2){background:var(--mint)}
+.can b{font-family:var(--font-display);font-size:1.1rem}
+.path{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px;align-items:center;font-weight:800}
+.path span{background:var(--paper);border:var(--line);border-radius:999px;padding:0 14px;font-size:.95rem}
+
+/* ---- slide 3 ---- */
+.tabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px}
+.tab{background:var(--paper);border:var(--line);border-radius:999px;padding:6px 18px;font-family:var(--font-display);font-weight:800;font-size:1.05rem;display:flex;align-items:center;gap:8px;box-shadow:0 4px 0 var(--ink)}
+.tab[aria-selected="true"]{background:var(--blue-deep);color:#fff;transform:translateY(2px);box-shadow:0 2px 0 var(--ink)}
+.defs{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:640px){.defs,.cols{grid-template-columns:1fr!important}}
+.def{border:var(--line);border-radius:22px;padding:18px;display:flex;flex-direction:column;gap:8px}
+.def.hak{background:var(--sky)}.def.kew{background:var(--mint)}
+.def h3{font-size:1.9rem}
+.def.hak h3{color:var(--blue-deep)}.def.kew h3{color:var(--green-deep)}
+.def .ex{background:#fff;border:2px dashed var(--ink);border-radius:14px;padding:8px 12px;font-weight:700;font-size:1rem}
+.balance{display:grid;grid-template-columns:minmax(0,300px) 1fr;gap:18px;align-items:center;margin-top:16px;background:var(--paper);border:var(--line);border-radius:22px;padding:14px 18px}
+@media(max-width:640px){.balance{grid-template-columns:1fr}}
+.balance svg{width:100%;height:auto;display:block}
+.plank{transform-origin:150px 98px;animation:rock 5s ease-in-out infinite}
+@keyframes rock{0%,100%{transform:rotate(-2.5deg)}50%{transform:rotate(2.5deg)}}
+.balance h4{font-size:1.4rem;color:var(--blue-deep);margin-bottom:4px}
+.who-box{margin-top:14px;display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:640px){.who-box{grid-template-columns:1fr}}
+.who{display:flex;gap:12px;align-items:flex-start;background:var(--sky);border:var(--line);border-radius:18px;padding:12px 14px}
+.who:nth-child(2){background:var(--mint)}
+.who .ic-l{width:48px;height:48px}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.col{border:var(--line);border-radius:22px;padding:16px 18px}
+.col.hak{background:var(--sky)}.col.kew{background:var(--mint)}
+.col h3{font-size:1.45rem;margin-bottom:10px;display:flex;align-items:center;gap:8px}
+.col.hak h3{color:var(--blue-deep)}.col.kew h3{color:var(--green-deep)}
+.col ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:9px}
+.col li{display:flex;gap:10px;align-items:flex-start;font-weight:700;line-height:1.35}
+.col li .ic-s{margin-top:2px}
+.place{display:flex;align-items:center;gap:10px;margin-bottom:12px;font-family:var(--font-display);font-weight:800;font-size:1.25rem}
+
+/* ---- slide 4 ---- */
+.baskets{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:12px}
+.basket{display:flex;align-items:center;gap:10px;border:var(--line);border-radius:20px;padding:8px 14px;font-family:var(--font-display);font-weight:800;font-size:1.1rem}
+.basket.hak{background:var(--sky)}.basket.kew{background:var(--mint)}
+.basket b{margin-left:auto;background:#fff;border:var(--line);border-radius:999px;min-width:40px;text-align:center;font-size:1.2rem}
+.basket.bump{animation:bump .4s}
+@keyframes bump{40%{transform:scale(1.08)}}
+.stage{position:relative;min-height:250px;display:grid;place-items:center;padding:10px 0}
+.act-card{width:min(100%,440px);background:var(--paper);border:var(--line);border-radius:24px;box-shadow:0 6px 0 var(--ink);padding:20px;display:flex;flex-direction:column;align-items:center;gap:10px;text-align:center;animation:popin .4s cubic-bezier(.2,1.3,.4,1);transition:transform .55s ease-in,opacity .55s ease-in}
+.act-card .chip{background:var(--sky);border:2px solid var(--ink);border-radius:999px;padding:0 14px;font-weight:800;font-size:.9rem}
+.act-card p{font-family:var(--font-display);font-weight:700;font-size:1.45rem;line-height:1.25;text-wrap:balance}
+.act-card.fly-hak{transform:translate(-26%,-150px) scale(.25);opacity:0}
+.act-card.fly-kew{transform:translate(26%,-150px) scale(.25);opacity:0}
+.act-card.shake{animation:shake .45s}
+@keyframes shake{20%,60%{transform:translateX(-10px)}40%,80%{transform:translateX(10px)}}
+.msg{min-height:3.2em;text-align:center;font-weight:800;font-size:1.05rem;margin:6px 0 10px}
+.msg.ok{color:var(--green-deep)}.msg.no{color:var(--warn-ink)}
+.answers{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.answers .btn{width:100%;font-size:1.25rem}
+.tally{text-align:center;font-weight:800;margin-top:6px;color:var(--ink-soft)}
+.endbox{text-align:center;display:flex;flex-direction:column;align-items:center;gap:12px;padding:10px 0}
+.endbox h3{font-size:1.8rem;color:var(--green-deep)}
+.endbox .row{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
+
+/* ---- slide 5 ---- */
+.qintro{display:flex;flex-direction:column;align-items:flex-start;gap:14px}
+.qmeta{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;font-weight:800}
+.bar{height:16px;background:var(--sky);border:var(--line);border-radius:999px;overflow:hidden;margin:8px 0 16px}
+.bar i{display:block;height:100%;width:0;background:var(--green);transition:width .5s}
+.badge{display:inline-flex;background:var(--blue-deep);color:#fff;border-radius:999px;padding:0 14px;font-weight:800;font-size:.9rem}
+.qtext{font-family:var(--font-display);font-weight:700;font-size:clamp(1.3rem,3.4vw,1.7rem);line-height:1.3;margin:10px 0 16px;text-wrap:balance}
+.opts{display:grid;gap:12px}
+.opts.tf{grid-template-columns:1fr 1fr}
+.opt{display:flex;align-items:center;gap:12px;text-align:left;width:100%;background:var(--paper);border:var(--line);border-radius:20px;padding:10px 14px;box-shadow:0 4px 0 var(--ink);font-weight:700;min-height:58px;transition:transform .12s,background .2s}
+.opt:hover:not(:disabled){transform:translateY(-2px);background:var(--sky)}
+.opt:disabled{cursor:default}
+.opt .let{flex:none;width:36px;height:36px;border-radius:50%;background:var(--sky-2);border:var(--line);display:grid;place-items:center;font-family:var(--font-display);font-weight:800}
+.opt .otxt{flex:1;min-width:0}
+.opt .note{flex:none;font-size:.8rem;font-weight:800;background:#fff;border:2px solid var(--ink);border-radius:999px;padding:0 10px}
+.opt.correct{background:var(--mint-2)}
+.opt.correct .let{background:var(--green);color:#fff}
+.opt.wrong{background:var(--warn-bg)}
+.opts.tf .opt{justify-content:center;font-family:var(--font-display);font-size:1.3rem;font-weight:800}
+.opts.tf .opt .otxt{flex:none}
+.opts.tf .opt .note{display:none}
+@media(max-width:520px){.opts.tf .opt{flex-wrap:wrap;justify-content:flex-start}}
+.fb{position:relative;margin-top:16px;border:var(--line);border-radius:20px;padding:14px 16px;display:flex;gap:12px;align-items:flex-start;animation:popin .4s cubic-bezier(.2,1.3,.4,1)}
+.fb.ok{background:var(--mint-2)}
+.fb.bad{background:var(--warn-bg);color:var(--warn-ink)}
+.fb strong{font-family:var(--font-display);font-size:1.3rem;display:block}
+.fb p{margin-top:4px}
+.fb .mot{font-weight:800}
+.fb .fbicon{width:46px;height:46px}
+.pop{animation:starpop .7s cubic-bezier(.2,1.8,.4,1)}
+@keyframes starpop{from{transform:scale(0) rotate(-90deg)}to{transform:none}}
+.qnext{margin-top:16px;display:flex;justify-content:flex-end}
+.confetti{position:absolute;left:30px;top:20px;width:20px;height:20px;pointer-events:none;animation:fly 1s ease-out forwards}
+@keyframes fly{from{transform:translate(0,0) scale(.4);opacity:1}to{transform:translate(var(--dx),var(--dy)) scale(1) rotate(200deg);opacity:0}}
+.result{text-align:center;display:flex;flex-direction:column;align-items:center;gap:12px;position:relative}
+.result h3{font-size:2rem;color:var(--blue-deep)}
+.bigscore{font-family:var(--font-display);font-weight:800;font-size:3.4rem;line-height:1;color:var(--green-deep)}
+.stars{display:flex;gap:6px}
+.stars .ic{width:64px;height:64px}
+.stars .off{opacity:.25;filter:grayscale(1)}
+.stars .on{animation:starpop .7s cubic-bezier(.2,1.8,.4,1) backwards}
+.stars .on:nth-child(2){animation-delay:.2s}.stars .on:nth-child(3){animation-delay:.4s}
+.result .row{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
+
+/* ---- slide 6 ---- */
+.sum{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px}
+@media(max-width:560px){.sum{grid-template-columns:1fr}}
+.sumc{border:var(--line);border-radius:20px;padding:14px 16px;display:flex;align-items:center;gap:14px;background:var(--sky)}
+.sumc:nth-child(2){background:var(--mint)}
+.sumc b{font-family:var(--font-display);font-size:2rem;line-height:1}
+.sumc small{display:block;font-weight:800;font-size:.95rem}
+.talk{display:flex;gap:14px;align-items:flex-start;background:var(--mint);border:var(--line);border-radius:22px;padding:16px;margin-bottom:22px}
+.talk .kidwrap{width:62px;flex:none}
+.talk .kidwrap svg{width:100%;height:auto;display:block;animation:bob 2.6s ease-in-out infinite}
+.talk p{font-weight:700;font-size:1.1rem}
+.talk .btn{margin-top:10px;min-height:44px;font-size:1rem;padding:6px 18px}
+.refl h3{font-size:1.6rem;margin-bottom:14px;color:var(--blue-deep)}
+.q-label{font-weight:800;margin-bottom:8px}
+.feels{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:6px}
+@media(max-width:560px){.feels{grid-template-columns:1fr}}
+.feel{background:var(--paper);border:var(--line);border-radius:18px;padding:10px;font-weight:800;display:flex;flex-direction:column;align-items:center;gap:6px;text-align:center;box-shadow:0 4px 0 var(--ink)}
+.feel svg{width:46px;height:46px}
+.feel[aria-pressed="true"]{background:var(--blue-deep);color:#fff;transform:translateY(2px);box-shadow:0 2px 0 var(--ink)}
+.feelmsg{min-height:1.6em;font-weight:800;color:var(--green-deep);margin:8px 0 16px}
+.checks{display:grid;gap:8px;margin-bottom:18px}
+.checks label{display:flex;gap:12px;align-items:center;background:var(--sky);border:var(--line);border-radius:16px;padding:8px 14px;font-weight:700;cursor:pointer}
+.checks input{width:24px;height:24px;accent-color:var(--green-deep);flex:none}
+.thanks{margin-top:20px;text-align:center;background:var(--sky);border:var(--line);border-radius:24px;padding:22px;display:flex;flex-direction:column;align-items:center;gap:10px}
+.thanks h3{font-size:1.9rem;color:var(--green-deep)}
+.thanks .ic{width:72px;height:72px}
+.foot{text-align:center;font-weight:800;font-size:.9rem;color:var(--ink)}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+</style>
+
+<!-- ===== Kumpulan ikon dan karakter ===== -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="cloud" viewBox="0 0 120 60"><path d="M25 54 C6 54 2 34 20 30 C20 12 46 6 56 22 C64 6 92 10 94 30 C116 28 118 54 98 54 Z" fill="#fff" stroke="#BCE0FF" stroke-width="3"/></symbol>
+    <symbol id="i-school" viewBox="0 0 48 48"><path class="o f-w" d="M6 20 H42 V43 H6 Z"/><path class="o f-g" d="M24 8 V1 L32 3.5 L24 6"/><path class="o f-b" d="M3 21 L24 8 L45 21 Z"/><circle class="o f-y" cx="24" cy="16" r="2.8"/><rect class="o f-g" x="19" y="30" width="10" height="13" rx="2"/><rect class="o f-sky" x="10" y="26" width="6" height="7" rx="1"/><rect class="o f-sky" x="32" y="26" width="6" height="7" rx="1"/></symbol>
+    <symbol id="i-house" viewBox="0 0 48 48"><rect class="o f-w" x="9" y="22" width="30" height="21"/><path class="o f-g" d="M4 24 L24 8 L44 24 Z"/><rect class="o f-b" x="20" y="31" width="9" height="12" rx="2"/><rect class="o f-sky" x="12" y="27" width="6" height="6" rx="1"/><rect class="o f-sky" x="31" y="27" width="6" height="6" rx="1"/></symbol>
+    <symbol id="i-book" viewBox="0 0 48 48"><path class="o f-w" d="M24 13 C18 8 10 9 5 11 V38 C10 36 18 35 24 40 Z"/><path class="o f-sky" d="M24 13 C30 8 38 9 43 11 V38 C38 36 30 35 24 40 Z"/><path class="o nofill" d="M10 17 C14 16 18 17 20 19 M10 23 C14 22 18 23 20 25"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 48 48"><circle class="o f-g" cx="11" cy="11" r="6"/><circle class="o f-g" cx="37" cy="11" r="6"/><circle class="o f-w" cx="24" cy="26" r="17"/><path class="o nofill" d="M24 15 V26 L31 30"/></symbol>
+    <symbol id="i-broom" viewBox="0 0 48 48"><path class="o nofill" d="M38 5 L22 27"/><path class="o f-g" d="M15 26 L28 23 L34 43 H8 Z"/><path class="o nofill" d="M16 33 L15 41 M22 31 L22 41 M27 33 L28 41"/></symbol>
+    <symbol id="i-health" viewBox="0 0 48 48"><rect class="o f-w" x="6" y="6" width="36" height="36" rx="9"/><path class="o f-g" d="M20 12 H28 V20 H36 V28 H28 V36 H20 V28 H12 V20 H20 Z"/></symbol>
+    <symbol id="i-chat" viewBox="0 0 48 48"><path class="o f-b" d="M9 8 H39 A5 5 0 0 1 44 13 V28 A5 5 0 0 1 39 33 H26 L15 43 V33 H9 A5 5 0 0 1 4 28 V13 A5 5 0 0 1 9 8 Z"/><circle class="f-w" cx="15" cy="21" r="2.8"/><circle class="f-w" cx="24" cy="21" r="2.8"/><circle class="f-w" cx="33" cy="21" r="2.8"/></symbol>
+    <symbol id="i-bin" viewBox="0 0 48 48"><path class="o f-g" d="M12 17 H36 L33 43 H15 Z"/><path class="o f-b" d="M8 11 H40 V17 H8 Z"/><path class="o nofill" d="M19 11 V7 H29 V11 M20 24 V36 M28 24 V36"/></symbol>
+    <symbol id="i-clip" viewBox="0 0 48 48"><rect class="o f-w" x="9" y="7" width="30" height="36" rx="5"/><rect class="o f-b" x="17" y="3" width="14" height="8" rx="3"/><path class="o nofill" d="M16 20 L19 23 L24 17 M16 32 L19 35 L24 29 M28 21 H33 M28 33 H33"/></symbol>
+    <symbol id="i-heart" viewBox="0 0 48 48"><path class="o f-b" d="M24 42 C7 29 5 18 11 12 C16 8 22 10 24 15 C26 10 32 8 37 12 C43 18 41 29 24 42 Z"/><path class="o nofill" d="M13 17 C14 15 16 14 18 15" stroke="#fff"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 48 48"><path class="o f-b" d="M24 4 L40 10 V24 C40 33 33 40 24 44 C15 40 8 33 8 24 V10 Z"/><path class="st-w" d="M16 24 L22 30 L33 18"/></symbol>
+    <symbol id="i-people" viewBox="0 0 48 48"><circle class="o f-s" cx="15" cy="15" r="6"/><circle class="o f-s2" cx="33" cy="15" r="6"/><path class="o f-b" d="M5 42 C5 31 10 26 15 26 C20 26 25 31 25 42 Z"/><path class="o f-g" d="M23 42 C23 31 28 26 33 26 C38 26 43 31 43 42 Z"/></symbol>
+    <symbol id="i-star" viewBox="0 0 48 48"><path class="o f-y" d="M24 4 L30 17 L44 18.5 L33.5 28 L36.5 42 L24 35 L11.5 42 L14.5 28 L4 18.5 L18 17 Z"/></symbol>
+    <symbol id="i-check" viewBox="0 0 48 48"><circle class="o f-g" cx="24" cy="24" r="19"/><path class="st-w" d="M14 25 L21 32 L34 17"/></symbol>
+    <symbol id="i-bag" viewBox="0 0 48 48"><path class="o f-b" d="M12 17 C12 10 18 6 24 6 C30 6 36 10 36 17 V40 A4 4 0 0 1 32 44 H16 A4 4 0 0 1 12 40 Z"/><rect class="o f-g" x="16" y="27" width="16" height="12" rx="3"/><path class="o nofill" d="M20 8 V4 H28 V8"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 48 48"><path d="M10 24 H37 M26 12 L38 24 L26 36" fill="none" stroke="currentColor" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-smile" viewBox="0 0 48 48"><circle class="o f-y" cx="24" cy="24" r="19"/><circle class="f-n" cx="17" cy="21" r="2.6"/><circle class="f-n" cx="31" cy="21" r="2.6"/><path class="o nofill" d="M15 29 Q24 38 33 29"/></symbol>
+    <symbol id="i-ok" viewBox="0 0 48 48"><circle class="o f-y" cx="24" cy="24" r="19"/><circle class="f-n" cx="17" cy="21" r="2.6"/><circle class="f-n" cx="31" cy="21" r="2.6"/><path class="o nofill" d="M16 31 Q24 34 32 31"/></symbol>
+    <symbol id="i-hm" viewBox="0 0 48 48"><circle class="o f-y" cx="24" cy="24" r="19"/><circle class="f-n" cx="17" cy="21" r="2.6"/><circle class="f-n" cx="31" cy="21" r="2.6"/><path class="o nofill" d="M17 32 H31"/></symbol>
+
+    <symbol id="kid-girl" viewBox="0 0 100 150">
+      <circle class="o f-h" cx="20" cy="46" r="9"/><circle class="o f-h" cx="80" cy="46" r="9"/>
+      <path class="arm-o" d="M31 82 L12 104"/><path class="arm-s" d="M31 82 L12 104"/>
+      <path class="arm-o" d="M69 82 L88 62"/><path class="arm-s" d="M69 82 L88 62"/>
+      <rect class="o f-s" x="38" y="126" width="9" height="18" rx="3"/><rect class="o f-s" x="53" y="126" width="9" height="18" rx="3"/>
+      <ellipse class="o f-b" cx="42" cy="145" rx="8" ry="4"/><ellipse class="o f-b" cx="58" cy="145" rx="8" ry="4"/>
+      <path class="o f-g" d="M22 108 H78 L86 132 H14 Z"/>
+      <path class="o f-w" d="M28 74 H72 L78 112 H22 Z"/>
+      <path class="o f-b" d="M42 74 H58 L50 92 Z"/>
+      <circle class="o f-s" cx="50" cy="44" r="26"/>
+      <path class="o f-h" d="M24 42 C22 14 78 14 76 42 C66 30 34 30 24 42 Z"/>
+      <circle class="f-n" cx="41" cy="48" r="3"/><circle class="f-n" cx="59" cy="48" r="3"/>
+      <circle class="f-bl" cx="33" cy="57" r="4"/><circle class="f-bl" cx="67" cy="57" r="4"/>
+      <path class="o nofill" d="M42 57 Q50 65 58 57"/>
+    </symbol>
+    <symbol id="kid-boy" viewBox="0 0 100 150">
+      <path class="arm-o" d="M31 82 L12 62"/><path class="arm-s2" d="M31 82 L12 62"/>
+      <path class="arm-o" d="M69 82 L88 104"/><path class="arm-s2" d="M69 82 L88 104"/>
+      <rect class="o f-s2" x="36" y="124" width="10" height="20" rx="3"/><rect class="o f-s2" x="54" y="124" width="10" height="20" rx="3"/>
+      <ellipse class="o f-g" cx="41" cy="145" rx="8" ry="4"/><ellipse class="o f-g" cx="59" cy="145" rx="8" ry="4"/>
+      <path class="o f-b" d="M24 108 H76 V130 H54 V120 H46 V130 H24 Z"/>
+      <path class="o f-w" d="M28 74 H72 L76 112 H24 Z"/>
+      <path class="o f-g" d="M42 74 H58 L50 92 Z"/>
+      <circle class="o f-s2" cx="50" cy="44" r="26"/>
+      <path class="o f-h" d="M24 40 C22 12 78 12 76 40 C70 30 60 24 50 24 C40 24 30 30 24 40 Z"/>
+      <circle class="f-n" cx="41" cy="48" r="3"/><circle class="f-n" cx="59" cy="48" r="3"/>
+      <path class="o nofill" d="M42 57 Q50 65 58 57"/>
+    </symbol>
+  </defs>
+</svg>
+
+<div class="scene" aria-hidden="true">
+  <svg class="cloud c1"><use href="#cloud"/></svg>
+  <svg class="cloud c2"><use href="#cloud"/></svg>
+  <svg class="cloud c3"><use href="#cloud"/></svg>
+  <svg class="hill-house"><use href="#i-house"/></svg>
+  <svg class="hill-school"><use href="#i-school"/></svg>
+  <svg class="hills" viewBox="0 0 1200 200" preserveAspectRatio="none">
+    <path d="M0 90 C200 20 380 40 560 90 C740 140 960 40 1200 80 V200 H0 Z" fill="#8FDDA9" stroke="#0F2F5C" stroke-width="3"/>
+    <path d="M0 150 C220 100 420 120 620 150 C820 180 1000 110 1200 140 V200 H0 Z" fill="#34B864" stroke="#0F2F5C" stroke-width="3"/>
+  </svg>
+</div>
+
+<div class="app">
+  <header class="top">
+    <div class="brand">
+      <svg class="ic" aria-hidden="true"><use href="#i-school"/></svg>
+      <strong>Hak dan Kewajibanku</strong>
+    </div>
+    <span class="pill">Pendidikan Pancasila &middot; Kelas 4 SD</span>
+  </header>
+
+  <nav aria-label="Langkah belajar"><ol class="steps" id="steps"></ol></nav>
+
+  <main>
+    <!-- 1. Pembuka & identitas -->
+    <section class="slide card" id="s0" aria-labelledby="h0">
+      <div class="hero">
+        <div>
+          <span class="pill">Media Belajar Interaktif</span>
+          <h1 id="h0" tabindex="-1">Hak dan <span>Kewajibanku</span></h1>
+          <p class="lead">Ayo belajar menjadi warga sekolah dan warga masyarakat yang baik. Kita akan membaca, bermain kartu, dan mengerjakan kuis bersama.</p>
+          <dl class="ident">
+            <dt>Mata pelajaran</dt><dd>Pendidikan Pancasila</dd>
+            <dt>Kelas</dt><dd>4 SD (Fase B)</dd>
+            <dt>Topik</dt><dd>Hak dan Kewajiban</dd>
+          </dl>
+          <div class="field">
+            <label for="nama">Tulis namamu di sini</label>
+            <input id="nama" type="text" maxlength="30" placeholder="Contoh: Dina" autocomplete="off">
+          </div>
+          <button class="btn btn-g" data-go="1" type="button">Mulai Belajar <svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+        </div>
+        <div class="art" aria-hidden="true">
+          <svg class="st s1"><use href="#i-star"/></svg>
+          <svg class="st s2"><use href="#i-star"/></svg>
+          <svg class="st s3"><use href="#i-star"/></svg>
+          <svg class="school"><use href="#i-school"/></svg>
+          <svg class="kid k1" viewBox="0 0 100 150"><use href="#kid-boy"/></svg>
+          <svg class="kid k2" viewBox="0 0 100 150"><use href="#kid-girl"/></svg>
+          <svg class="bag"><use href="#i-bag"/></svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. Tujuan -->
+    <section class="slide card" id="s1" aria-labelledby="h1b" hidden>
+      <div class="head"><svg class="ic-l" aria-hidden="true"><use href="#i-clip"/></svg><h2 id="h1b">Tujuan Belajar Kita</h2></div>
+      <div class="goal">
+        <div class="kidwrap" aria-hidden="true"><svg viewBox="0 0 100 150"><use href="#kid-girl"/></svg></div>
+        <div>
+          <h3>Setelah belajar, aku mampu:</h3>
+          <p>mengenali hak dan kewajiban sebagai warga sekolah dan warga masyarakat.</p>
+        </div>
+      </div>
+      <ul class="can">
+        <li><svg class="ic-l" aria-hidden="true"><use href="#i-book"/></svg><b>Menyebutkan hak</b><span>Hal yang boleh aku dapatkan di sekolah dan di lingkungan rumah.</span></li>
+        <li><svg class="ic-l" aria-hidden="true"><use href="#i-broom"/></svg><b>Menyebutkan kewajiban</b><span>Tugas yang harus aku lakukan di sekolah dan di lingkungan rumah.</span></li>
+        <li><svg class="ic-l" aria-hidden="true"><use href="#i-people"/></svg><b>Membedakan keduanya</b><span>Aku bisa menunjukkan mana hak dan mana kewajiban.</span></li>
+      </ul>
+      <div class="path" aria-label="Urutan belajar"><strong>Urutan belajar:</strong><span>Materi</span><span>Aktivitas</span><span>Kuis</span><span>Refleksi</span></div>
+    </section>
+
+    <!-- 3. Materi -->
+    <section class="slide card" id="s2" aria-labelledby="h2b" hidden>
+      <div class="head"><svg class="ic-l" aria-hidden="true"><use href="#i-book"/></svg><h2 id="h2b">Materi Singkat</h2></div>
+      <div class="tabs" role="tablist" aria-label="Bagian materi">
+        <button class="tab" role="tab" id="t0" aria-selected="true" aria-controls="p0" type="button"><svg class="ic" aria-hidden="true"><use href="#i-clip"/></svg>Apa itu?</button>
+        <button class="tab" role="tab" id="t1" aria-selected="false" aria-controls="p1" type="button"><svg class="ic" aria-hidden="true"><use href="#i-school"/></svg>Di sekolah</button>
+        <button class="tab" role="tab" id="t2" aria-selected="false" aria-controls="p2" type="button"><svg class="ic" aria-hidden="true"><use href="#i-house"/></svg>Di masyarakat</button>
+      </div>
+
+      <div role="tabpanel" id="p0" aria-labelledby="t0">
+        <div class="defs">
+          <div class="def hak">
+            <h3>Hak</h3>
+            <p>Hak adalah sesuatu yang <b>boleh kita terima atau dapatkan</b>.</p>
+            <p class="ex">Contoh: Aku berhak belajar di sekolah.</p>
+          </div>
+          <div class="def kew">
+            <h3>Kewajiban</h3>
+            <p>Kewajiban adalah tugas yang <b>harus kita lakukan</b>.</p>
+            <p class="ex">Contoh: Aku wajib menjaga kebersihan kelas.</p>
+          </div>
+        </div>
+        <div class="balance">
+          <svg viewBox="0 0 300 160" role="img" aria-label="Jungkat-jungkit dengan Hak di satu sisi dan Kewajiban di sisi lain, seimbang">
+            <path class="o f-g" d="M128 152 L150 102 L172 152 Z"/>
+            <g class="plank">
+              <rect class="o f-b" x="14" y="92" width="272" height="12" rx="6"/>
+              <rect class="o f-sky" x="24" y="48" width="92" height="44" rx="10"/>
+              <text class="svgtxt" x="70" y="77" text-anchor="middle">Hak</text>
+              <rect class="o f-m" x="184" y="48" width="92" height="44" rx="10"/>
+              <text class="svgtxt" x="230" y="77" text-anchor="middle" style="font-size:15px">Kewajiban</text>
+            </g>
+          </svg>
+          <div>
+            <h4>Ingat, ya!</h4>
+            <p>Hak dan kewajiban harus <b>seimbang</b>, seperti jungkat-jungkit. Kita boleh menerima hak, dan kita juga harus menjalankan kewajiban.</p>
+          </div>
+        </div>
+        <div class="who-box">
+          <div class="who"><svg class="ic-l" aria-hidden="true"><use href="#i-school"/></svg><div><b>Warga sekolah</b><br>Murid, guru, kepala sekolah, dan penjaga sekolah.</div></div>
+          <div class="who"><svg class="ic-l" aria-hidden="true"><use href="#i-house"/></svg><div><b>Warga masyarakat</b><br>Kita dan para tetangga di lingkungan rumah.</div></div>
+        </div>
+      </div>
+
+      <div role="tabpanel" id="p1" aria-labelledby="t1" hidden>
+        <div class="place"><svg class="ic-l" style="width:44px;height:44px" aria-hidden="true"><use href="#i-school"/></svg>Aku sebagai warga sekolah</div>
+        <div class="cols" id="cols-sekolah"></div>
+      </div>
+
+      <div role="tabpanel" id="p2" aria-labelledby="t2" hidden>
+        <div class="place"><svg class="ic-l" style="width:44px;height:44px" aria-hidden="true"><use href="#i-house"/></svg>Aku sebagai warga masyarakat</div>
+        <div class="cols" id="cols-masy"></div>
+      </div>
+    </section>
+
+    <!-- 4. Aktivitas -->
+    <section class="slide card" id="s3" aria-labelledby="h3b" hidden>
+      <div class="head"><svg class="ic-l" aria-hidden="true"><use href="#i-clip"/></svg><h2 id="h3b">Aktivitas: Pilah Kartu</h2></div>
+      <p class="lead" style="margin-bottom:14px">Baca kartu, lalu pilih. Apakah ini <b>hak</b> atau <b>kewajiban</b>?</p>
+      <div class="baskets">
+        <div class="basket hak" id="bk-hak"><svg class="ic" aria-hidden="true"><use href="#i-book"/></svg>Hak<b id="cnt-hak">0</b></div>
+        <div class="basket kew" id="bk-kew"><svg class="ic" aria-hidden="true"><use href="#i-broom"/></svg>Kewajiban<b id="cnt-kew">0</b></div>
+      </div>
+      <div id="act-play">
+        <div class="stage" id="act-stage"></div>
+        <p class="msg" id="act-msg" role="status" aria-live="polite"></p>
+        <div class="answers">
+          <button class="btn btn-b" id="ans-hak" type="button">Ini HAK</button>
+          <button class="btn btn-g" id="ans-kew" type="button">Ini KEWAJIBAN</button>
+        </div>
+        <p class="tally" id="act-tally"></p>
+      </div>
+      <div class="endbox" id="act-end" hidden>
+        <svg class="ic" style="width:80px;height:80px" aria-hidden="true"><use href="#i-star"/></svg>
+        <h3>Semua kartu sudah masuk!</h3>
+        <p class="lead">Tebakan pertamamu benar <b id="act-score">0</b> dari 10 kartu.</p>
+        <p id="act-note" style="font-weight:700"></p>
+        <div class="row">
+          <button class="btn" id="act-again" type="button">Main lagi</button>
+          <button class="btn btn-g" data-go="4" type="button">Lanjut ke Kuis <svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Kuis -->
+    <section class="slide card" id="s4" aria-labelledby="h4b" hidden>
+      <div class="head"><svg class="ic-l" aria-hidden="true"><use href="#i-shield"/></svg><h2 id="h4b">Kuis Hak dan Kewajiban</h2></div>
+
+      <div class="qintro" id="q-intro">
+        <p class="lead">Ada <b>15 soal</b>: pilihan ganda dan benar atau salah. Pilih jawaban yang paling tepat. Kalau jawabanmu belum tepat, kamu akan dapat penjelasan.</p>
+        <button class="btn btn-g" id="q-start" type="button">Mulai Kuis <svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+      </div>
+
+      <div id="q-play" hidden>
+        <div class="qmeta"><span id="q-count"></span><span class="badge" id="q-type"></span><span>Benar: <b id="q-score">0</b></span></div>
+        <div class="bar" role="progressbar" aria-label="Kemajuan kuis" aria-valuemin="0" aria-valuemax="15" id="q-barwrap"><i id="q-bar"></i></div>
+        <p class="qtext" id="q-text"></p>
+        <div class="opts mc" id="q-opts"></div>
+        <div class="fb" id="q-fb" role="status" aria-live="polite" hidden></div>
+        <div class="qnext"><button class="btn btn-b" id="q-next" type="button" hidden>Soal berikutnya <svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></button></div>
+      </div>
+
+      <div class="result" id="q-result" hidden>
+        <h3>Kuis Selesai!</h3>
+        <div class="stars" id="r-stars" aria-hidden="true"></div>
+        <div class="bigscore"><span id="r-score">0</span> / 15</div>
+        <p class="lead" id="r-msg"></p>
+        <p id="r-wrong" style="font-weight:700"></p>
+        <div class="row">
+          <button class="btn" id="q-again" type="button">Ulangi kuis</button>
+          <button class="btn btn-g" data-go="5" type="button">Lanjut ke Refleksi <svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Umpan balik & refleksi -->
+    <section class="slide card" id="s5" aria-labelledby="h5b" hidden>
+      <div class="head"><svg class="ic-l" aria-hidden="true"><use href="#i-heart"/></svg><h2 id="h5b">Umpan Balik dan Refleksi</h2></div>
+      <div class="sum">
+        <div class="sumc"><svg class="ic-l" aria-hidden="true"><use href="#i-clip"/></svg><div><small>Aktivitas pilah kartu</small><b id="f-act">-</b></div></div>
+        <div class="sumc"><svg class="ic-l" aria-hidden="true"><use href="#i-shield"/></svg><div><small>Kuis</small><b id="f-quiz">-</b></div></div>
+      </div>
+      <div class="talk">
+        <div class="kidwrap" aria-hidden="true"><svg viewBox="0 0 100 150"><use href="#kid-boy"/></svg></div>
+        <div><p id="f-msg"></p><button class="btn" id="f-back" type="button" hidden></button></div>
+      </div>
+
+      <div class="refl">
+        <h3>Ayo berefleksi</h3>
+        <p class="q-label" id="fl-label">1. Bagaimana perasaanmu setelah belajar hari ini?</p>
+        <div class="feels" role="group" aria-labelledby="fl-label">
+          <button class="feel" type="button" data-f="0" aria-pressed="false"><svg aria-hidden="true"><use href="#i-smile"/></svg>Aku sudah paham</button>
+          <button class="feel" type="button" data-f="1" aria-pressed="false"><svg aria-hidden="true"><use href="#i-ok"/></svg>Aku hampir paham</button>
+          <button class="feel" type="button" data-f="2" aria-pressed="false"><svg aria-hidden="true"><use href="#i-hm"/></svg>Aku perlu belajar lagi</button>
+        </div>
+        <p class="feelmsg" id="feelmsg" role="status" aria-live="polite"></p>
+
+        <p class="q-label">2. Kewajiban apa yang akan aku lakukan? (boleh pilih lebih dari satu)</p>
+        <div class="checks">
+          <label for="c1"><input type="checkbox" id="c1">Datang ke sekolah tepat waktu</label>
+          <label for="c2"><input type="checkbox" id="c2">Menjaga kebersihan kelas</label>
+          <label for="c3"><input type="checkbox" id="c3">Menghormati guru dan teman</label>
+          <label for="c4"><input type="checkbox" id="c4">Membuang sampah pada tempatnya</label>
+          <label for="c5"><input type="checkbox" id="c5">Ikut membantu kegiatan di lingkungan rumah</label>
+        </div>
+
+        <div class="field">
+          <label for="belajar">3. Hari ini aku belajar bahwa ...</label>
+          <textarea id="belajar" placeholder="Tulis dengan kalimatmu sendiri"></textarea>
+        </div>
+        <button class="btn btn-g" id="finish" type="button">Selesai Belajar <svg class="ic" aria-hidden="true"><use href="#i-check"/></svg></button>
+
+        <div class="thanks" id="thanks" hidden role="status">
+          <svg class="ic" aria-hidden="true"><use href="#i-star"/></svg>
+          <h3 id="thanks-h"></h3>
+          <p id="thanks-p"></p>
+          <button class="btn" id="restart" type="button">Belajar dari awal</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="nav">
+    <button class="btn back" id="prev" type="button" hidden><svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg>Sebelumnya</button>
+    <button class="btn btn-g" id="next" type="button" hidden>Lanjut <svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+  </div>
+  <p class="foot">Pendidikan Pancasila &middot; Kelas 4 SD &middot; Hak dan Kewajiban</p>
+</div>
+
+<script>
+(function(){
+  var $=function(s,r){return (r||document).querySelector(s)};
+  var $$=function(s,r){return Array.prototype.slice.call((r||document).querySelectorAll(s))};
+  var ico=function(id,cls){return '<svg class="'+(cls||'ic')+'" aria-hidden="true"><use href="#'+id+'"/></svg>'};
+
+  /* ---------- navigasi ---------- */
+  var names=['Pembuka','Tujuan','Materi','Aktivitas','Kuis','Refleksi'];
+  var slides=$$('.slide'), cur=0, visited={0:true};
+  $('#steps').innerHTML=names.map(function(n,i){
+    return '<li><button class="step" type="button" data-go="'+i+'" aria-label="Langkah '+(i+1)+': '+n+'"><span class="dot">'+(i+1)+'</span><span class="lbl">'+n+'</span></button></li>';
+  }).join('');
+  function go(n){
+    cur=Math.max(0,Math.min(slides.length-1,n)); visited[cur]=true;
+    slides.forEach(function(s,i){s.hidden=i!==cur});
+    $$('.step').forEach(function(b,i){
+      b.classList.toggle('on',i===cur);
+      b.classList.toggle('done',i!==cur&&!!visited[i]);
+      if(i===cur)b.setAttribute('aria-current','step');else b.removeAttribute('aria-current');
+    });
+    $('#prev').hidden=cur===0;
+    $('#next').hidden=cur===0||cur===slides.length-1;
+    if(cur===5)renderFeedback();
+    window.scrollTo(0,0);
+    var h=$('h1,h2',slides[cur]);
+    if(h){h.setAttribute('tabindex','-1');try{h.focus({preventScroll:true})}catch(e){}}
+  }
+  document.addEventListener('click',function(e){
+    var b=e.target.closest('[data-go]');
+    if(b)go(+b.getAttribute('data-go'));
+  });
+  $('#prev').addEventListener('click',function(){go(cur-1)});
+  $('#next').addEventListener('click',function(){go(cur+1)});
+
+  function studentName(){return $('#nama').value.trim()||'Teman Hebat'}
+
+  /* ---------- materi ---------- */
+  var tabs=$$('.tab');
+  function showTab(i){
+    tabs.forEach(function(t,k){t.setAttribute('aria-selected',k===i?'true':'false');$('#p'+k).hidden=k!==i});
+  }
+  tabs.forEach(function(t,i){t.addEventListener('click',function(){showTab(i)})});
+  var materi={
+    sekolah:{
+      hak:['Belajar dan mendapat bimbingan dari guru','Dihormati oleh guru dan teman','Bermain dan beristirahat saat jam istirahat','Menyampaikan pendapat dengan sopan','Merasa aman dan nyaman di sekolah','Memakai fasilitas sekolah, seperti perpustakaan'],
+      kew:['Datang ke sekolah tepat waktu','Memakai seragam dengan rapi','Mengerjakan tugas dengan jujur','Menjaga kebersihan kelas dan sekolah','Menghormati guru dan teman','Menaati tata tertib sekolah']
+    },
+    masy:{
+      hak:['Hidup aman dan nyaman di lingkungan rumah','Mendapat pelayanan kesehatan, seperti di puskesmas','Bermain di tempat yang aman','Menyampaikan pendapat dalam musyawarah','Diperlakukan adil oleh sesama warga'],
+      kew:['Ikut kerja bakti membersihkan lingkungan','Membuang sampah pada tempatnya','Menghormati tetangga','Menaati aturan di lingkungan','Ikut menjaga keamanan lingkungan']
+    }
+  };
+  function col(kind,list){
+    var hak=kind==='hak';
+    return '<div class="col '+kind+'"><h3>'+ico(hak?'i-book':'i-broom')+(hak?'Hakku':'Kewajibanku')+'</h3><ul>'+
+      list.map(function(t){return '<li>'+ico('i-check','ic-s')+'<span>'+t+'</span></li>'}).join('')+'</ul></div>';
+  }
+  $('#cols-sekolah').innerHTML=col('hak',materi.sekolah.hak)+col('kew',materi.sekolah.kew);
+  $('#cols-masy').innerHTML=col('hak',materi.masy.hak)+col('kew',materi.masy.kew);
+
+  /* ---------- konfeti ---------- */
+  function burst(host,n){
+    n=n||10;
+    for(var i=0;i<n;i++){
+      var a=Math.random()*Math.PI*2, d=50+Math.random()*80;
+      host.insertAdjacentHTML('beforeend','<svg class="confetti" style="--dx:'+Math.round(Math.cos(a)*d)+'px;--dy:'+Math.round(Math.sin(a)*d)+'px" aria-hidden="true"><use href="#i-star"/></svg>');
+    }
+    setTimeout(function(){$$('.confetti',host).forEach(function(c){c.remove()})},1100);
+  }
+
+  /* ---------- aktivitas ---------- */
+  var cards=[
+    {t:'Belajar di kelas dengan nyaman',w:'Di sekolah',a:'hak',i:'i-book',h:'Ini sesuatu yang boleh kita dapatkan, jadi ini hak.'},
+    {t:'Datang ke sekolah tepat waktu',w:'Di sekolah',a:'kew',i:'i-clock',h:'Ini tugas yang harus kita lakukan, jadi ini kewajiban.'},
+    {t:'Ikut kerja bakti membersihkan lingkungan',w:'Di masyarakat',a:'kew',i:'i-broom',h:'Kerja bakti adalah tugas bersama warga, jadi ini kewajiban.'},
+    {t:'Mendapat pelayanan kesehatan di puskesmas',w:'Di masyarakat',a:'hak',i:'i-health',h:'Warga boleh mendapat pelayanan kesehatan, jadi ini hak.'},
+    {t:'Menyampaikan pendapat saat diskusi',w:'Di sekolah',a:'hak',i:'i-chat',h:'Setiap murid boleh berpendapat dengan sopan, jadi ini hak.'},
+    {t:'Membuang sampah pada tempatnya',w:'Di masyarakat',a:'kew',i:'i-bin',h:'Menjaga kebersihan adalah tugas kita, jadi ini kewajiban.'},
+    {t:'Menaati tata tertib sekolah',w:'Di sekolah',a:'kew',i:'i-clip',h:'Aturan harus kita taati, jadi ini kewajiban.'},
+    {t:'Dihormati oleh guru dan teman',w:'Di sekolah',a:'hak',i:'i-heart',h:'Setiap murid boleh dihormati, jadi ini hak.'},
+    {t:'Hidup aman dan nyaman di lingkungan rumah',w:'Di masyarakat',a:'hak',i:'i-shield',h:'Setiap warga boleh hidup aman, jadi ini hak.'},
+    {t:'Menghormati tetangga',w:'Di masyarakat',a:'kew',i:'i-people',h:'Menghormati orang lain adalah tugas kita, jadi ini kewajiban.'}
+  ];
+  var act={i:0,score:0,tried:false,busy:false,hak:0,kew:0,done:false};
+  var okMsg=['Tepat sekali!','Hebat, benar!','Keren, kamu paham!','Bagus sekali!'];
+  function actRender(){
+    $('#cnt-hak').textContent=act.hak; $('#cnt-kew').textContent=act.kew;
+    if(act.i>=cards.length){
+      act.done=true;
+      $('#act-play').hidden=true; $('#act-end').hidden=false;
+      $('#act-score').textContent=act.score;
+      $('#act-note').textContent=act.score>=8?'Luar biasa! Kamu sudah pandai membedakan hak dan kewajiban.':act.score>=5?'Bagus! Sedikit lagi kamu akan makin mahir.':'Tidak apa-apa. Kamu sudah mencoba, dan semua kartu sudah benar. Main lagi yuk!';
+      return;
+    }
+    var c=cards[act.i]; act.tried=false; act.busy=false;
+    $('#act-stage').innerHTML='<div class="act-card" id="act-card"><span class="chip">'+c.w+'</span>'+ico(c.i,'ic-l')+'<p>'+c.t+'</p></div>';
+    $('#act-msg').textContent=''; $('#act-msg').className='msg';
+    $('#act-tally').textContent='Kartu '+(act.i+1)+' dari '+cards.length;
+    $('#ans-hak').disabled=false; $('#ans-kew').disabled=false;
+  }
+  function actAnswer(k){
+    if(act.busy||act.done)return;
+    var c=cards[act.i], card=$('#act-card'), msg=$('#act-msg');
+    if(k===c.a){
+      act.busy=true;
+      if(!act.tried)act.score++;
+      msg.className='msg ok'; msg.textContent=okMsg[act.i%okMsg.length];
+      $('#ans-hak').disabled=true; $('#ans-kew').disabled=true;
+      card.classList.add('fly-'+k);
+      setTimeout(function(){
+        act[k]++; var b=$('#bk-'+k); b.classList.remove('bump'); void b.offsetWidth; b.classList.add('bump');
+        act.i++; actRender();
+      },560);
+    }else{
+      act.tried=true;
+      msg.className='msg no'; msg.textContent='Belum tepat. '+c.h+' Ayo coba lagi!';
+      card.classList.remove('shake'); void card.offsetWidth; card.classList.add('shake');
+    }
+  }
+  $('#ans-hak').addEventListener('click',function(){actAnswer('hak')});
+  $('#ans-kew').addEventListener('click',function(){actAnswer('kew')});
+  $('#act-again').addEventListener('click',function(){
+    act={i:0,score:0,tried:false,busy:false,hak:0,kew:0,done:false};
+    $('#act-end').hidden=true; $('#act-play').hidden=false; actRender();
+  });
+  actRender();
+
+  /* ---------- kuis ---------- */
+  var Q=[
+    {t:'mc',q:'Hak adalah ...',o:['Tugas yang harus dikerjakan','Sesuatu yang boleh kita terima atau dapatkan','Larangan dari guru','Hukuman bagi murid'],a:1,e:'Hak adalah sesuatu yang boleh kita terima atau dapatkan, misalnya hak untuk belajar.'},
+    {t:'mc',q:'Kewajiban adalah ...',o:['Sesuatu yang boleh diminta','Hadiah dari teman','Tugas yang harus kita lakukan','Pilihan yang boleh tidak dikerjakan'],a:2,e:'Kewajiban adalah tugas yang harus kita lakukan, misalnya menjaga kebersihan kelas.'},
+    {t:'tf',q:'Belajar di sekolah adalah hak murid.',a:0,e:'Pernyataan ini benar. Setiap anak berhak belajar di sekolah.'},
+    {t:'mc',q:'Manakah yang termasuk kewajiban murid di sekolah?',o:['Bermain saat jam pelajaran','Mengerjakan tugas dari guru','Datang terlambat','Membuang sampah sembarangan'],a:1,e:'Mengerjakan tugas dari guru adalah kewajiban murid. Bermain saat pelajaran dan membuang sampah sembarangan tidak boleh dilakukan.'},
+    {t:'tf',q:'Menjaga kebersihan kelas adalah hak, bukan kewajiban.',a:1,e:'Pernyataan ini salah. Menjaga kebersihan kelas adalah kewajiban seluruh warga kelas.'},
+    {t:'mc',q:'Rina datang ke sekolah sebelum bel masuk berbunyi. Rina sedang ...',o:['Meminta hak','Menjalankan kewajiban','Mendapat hadiah','Melanggar aturan'],a:1,e:'Datang tepat waktu adalah kewajiban murid dan menunjukkan sikap disiplin.'},
+    {t:'mc',q:'Apa hak murid saat jam istirahat?',o:['Membuang sampah sembarangan','Mencontek tugas teman','Beristirahat dan bermain dengan aman','Mengganggu teman'],a:2,e:'Murid berhak beristirahat dan bermain dengan aman saat jam istirahat.'},
+    {t:'tf',q:'Semua murid berhak dihormati oleh guru dan teman.',a:0,e:'Pernyataan ini benar. Setiap murid berhak dihormati, dan kita juga wajib menghormati orang lain.'},
+    {t:'mc',q:'Kewajiban warga di lingkungan rumah adalah ...',o:['Ikut kerja bakti','Berteriak malam hari','Membuang sampah ke sungai','Tidak peduli pada tetangga'],a:0,e:'Ikut kerja bakti membuat lingkungan bersih dan nyaman untuk semua warga.'},
+    {t:'tf',q:'Mendapat pelayanan kesehatan di puskesmas adalah hak warga.',a:0,e:'Pernyataan ini benar. Setiap warga berhak mendapat pelayanan kesehatan.'},
+    {t:'mc',q:'Hak dan kewajiban harus ...',o:['Dipilih salah satu saja','Hanya hak yang dijalankan','Hanya kewajiban yang dijalankan','Dijalankan dengan seimbang'],a:3,e:'Hak dan kewajiban harus seimbang. Kita menerima hak dan juga menjalankan kewajiban.'},
+    {t:'tf',q:'Kita boleh menuntut hak tanpa menjalankan kewajiban.',a:1,e:'Pernyataan ini salah. Kalau ingin mendapat hak, kita juga harus menjalankan kewajiban.'},
+    {t:'mc',q:'Bu Guru membimbing Sari yang kesulitan membaca. Sari sedang mendapatkan ...',o:['Hak','Kewajiban','Hukuman','Tugas rumah'],a:0,e:'Mendapat bimbingan dari guru adalah hak murid.'},
+    {t:'mc',q:'Perbuatan mana yang menunjukkan menjalankan kewajiban di lingkungan rumah?',o:['Memetik bunga milik tetangga','Bermain keras saat malam hari','Membuang sampah pada tempatnya','Membiarkan got tersumbat'],a:2,e:'Membuang sampah pada tempatnya menjaga lingkungan tetap bersih dan sehat.'},
+    {t:'tf',q:'Menghormati tetangga yang berbeda suku dan agama termasuk kewajiban warga masyarakat.',a:0,e:'Pernyataan ini benar. Kita hidup bersama dan wajib saling menghormati.'}
+  ];
+  var praise=['Hebat! Jawabanmu benar.','Mantap! Kamu pintar sekali.','Keren! Kamu sudah paham.','Bagus sekali! Terus semangat ya.','Luar biasa! Pertahankan ya.'];
+  var mot=['Jangan menyerah. Salah itu bagian dari belajar.','Kamu pasti bisa! Coba lebih teliti di soal berikutnya.','Tidak apa-apa salah. Yang penting terus belajar.','Ayo semangat! Kamu hebat karena mau mencoba.'];
+  var quiz={i:0,score:0,wrong:[],done:false,answered:false};
+
+  function qStart(){
+    quiz={i:0,score:0,wrong:[],done:false,answered:false};
+    $('#q-intro').hidden=true; $('#q-result').hidden=true; $('#q-play').hidden=false;
+    showQ();
+  }
+  function showQ(){
+    var q=Q[quiz.i]; quiz.answered=false;
+    $('#q-count').textContent='Soal '+(quiz.i+1)+' dari '+Q.length;
+    $('#q-bar').style.width=(quiz.i/Q.length*100)+'%';
+    $('#q-barwrap').setAttribute('aria-valuenow',quiz.i);
+    $('#q-type').textContent=q.t==='tf'?'Benar atau Salah':'Pilihan Ganda';
+    $('#q-text').textContent=q.q;
+    var opts=q.t==='tf'?['Benar','Salah']:q.o;
+    var box=$('#q-opts'); box.className='opts '+(q.t==='tf'?'tf':'mc');
+    box.innerHTML=opts.map(function(t,k){
+      var lt=q.t==='tf'?(k===0?'B':'S'):'ABCD'.charAt(k);
+      return '<button class="opt" type="button" data-k="'+k+'"><span class="let">'+lt+'</span><span class="otxt">'+t+'</span></button>';
+    }).join('');
+    $('#q-fb').hidden=true; $('#q-next').hidden=true;
+    $('#q-score').textContent=quiz.score;
+  }
+  $('#q-opts').addEventListener('click',function(e){
+    var b=e.target.closest('.opt'); if(!b||quiz.answered)return;
+    quiz.answered=true;
+    var k=+b.getAttribute('data-k'), q=Q[quiz.i], ok=k===q.a;
+    $$('.opt',$('#q-opts')).forEach(function(x,j){
+      x.disabled=true;
+      if(j===q.a){x.classList.add('correct');x.insertAdjacentHTML('beforeend','<span class="note">Jawaban benar</span>')}
+      else if(j===k){x.classList.add('wrong');x.insertAdjacentHTML('beforeend','<span class="note">Pilihanmu</span>')}
+    });
+    var fb=$('#q-fb'); fb.hidden=false; fb.className='fb '+(ok?'ok':'bad');
+    if(ok){
+      quiz.score++;
+      fb.innerHTML=ico('i-star','ic fbicon pop')+'<div><strong>'+praise[quiz.i%praise.length]+'</strong></div>';
+      burst(fb,10);
+    }else{
+      quiz.wrong.push(quiz.i+1);
+      fb.innerHTML='<div><strong>Belum tepat, tidak apa-apa.</strong><p>'+q.e+'</p><p class="mot">'+mot[quiz.i%mot.length]+'</p></div>';
+    }
+    $('#q-score').textContent=quiz.score;
+    var nx=$('#q-next'); nx.hidden=false;
+    nx.firstChild.nodeValue=quiz.i===Q.length-1?'Lihat hasil ':'Soal berikutnya ';
+    try{nx.focus({preventScroll:true})}catch(err){}
+    try{nx.scrollIntoView({block:'nearest',behavior:'smooth'})}catch(err2){}
+  });
+  $('#q-next').addEventListener('click',function(){
+    if(quiz.i>=Q.length-1){showResult()}else{quiz.i++;showQ();window.scrollTo(0,0)}
+  });
+  function showResult(){
+    quiz.done=true;
+    $('#q-play').hidden=true; $('#q-result').hidden=false;
+    var s=quiz.score, st=s>=13?3:s>=9?2:1;
+    $('#r-score').textContent=s;
+    $('#r-stars').innerHTML=[1,2,3].map(function(n){return ico('i-star',n<=st?'ic on':'ic off')}).join('');
+    $('#r-msg').textContent=s>=13?'Luar biasa, '+studentName()+'! Kamu sangat paham hak dan kewajiban.':s>=9?'Bagus, '+studentName()+'! Kamu sudah paham sebagian besar materi.':'Terima kasih sudah berusaha, '+studentName()+'. Baca materi sekali lagi, lalu coba lagi. Kamu pasti bisa!';
+    $('#r-wrong').textContent=quiz.wrong.length?'Soal yang bisa kamu ulang: nomor '+quiz.wrong.join(', ')+'.':'Semua jawabanmu benar!';
+    if(st>=2)burst($('#q-result'),14);
+    window.scrollTo(0,0);
+  }
+  $('#q-start').addEventListener('click',qStart);
+  $('#q-again').addEventListener('click',qStart);
+
+  /* ---------- umpan balik & refleksi ---------- */
+  function renderFeedback(){
+    $('#f-act').textContent=act.done?act.score+' / 10':'Belum';
+    $('#f-quiz').textContent=quiz.done?quiz.score+' / 15':'Belum';
+    var msg,btn=$('#f-back'),n=studentName();
+    if(!quiz.done){
+      msg='Halo, '+n+'! Kamu belum mengerjakan kuis. Ayo coba dulu supaya kita tahu seberapa paham kamu.';
+      btn.hidden=false; btn.textContent='Kerjakan kuis'; btn.setAttribute('data-go','4');
+    }else if(quiz.score>=13){
+      msg='Luar biasa, '+n+'! Kamu sudah sangat paham hak dan kewajiban. Jadilah contoh yang baik bagi teman-temanmu.'; btn.hidden=true;
+    }else if(quiz.score>=9){
+      msg='Bagus, '+n+'! Kamu sudah paham sebagian besar. Ulangi soal yang belum tepat agar makin mantap.';
+      btn.hidden=false; btn.textContent='Baca materi lagi'; btn.setAttribute('data-go','2');
+    }else{
+      msg='Terima kasih sudah berusaha, '+n+'. Belajar butuh waktu, dan kamu sudah mulai dengan baik. Yuk baca materi sekali lagi, lalu coba kuis lagi.';
+      btn.hidden=false; btn.textContent='Baca materi lagi'; btn.setAttribute('data-go','2');
+    }
+    $('#f-msg').textContent=msg;
+  }
+  var feelText=['Hebat! Coba ceritakan hak dan kewajiban kepada temanmu atau keluargamu.','Bagus! Coba ulangi aktivitas pilah kartu agar makin paham.','Tidak apa-apa. Belajar butuh waktu. Baca materi lagi atau tanya gurumu ya.'];
+  $$('.feel').forEach(function(b){
+    b.addEventListener('click',function(){
+      $$('.feel').forEach(function(x){x.setAttribute('aria-pressed',x===b?'true':'false')});
+      $('#feelmsg').textContent=feelText[+b.getAttribute('data-f')];
+    });
+  });
+  $('#finish').addEventListener('click',function(){
+    var n=studentName();
+    $('#thanks-h').textContent='Terima kasih, '+n+'!';
+    var picked=$$('.checks input:checked').length;
+    $('#thanks-p').textContent=picked?'Kamu berjanji menjalankan '+picked+' kewajiban. Semoga kamu selalu ingat hak dan kewajibanmu di sekolah dan di rumah.':'Kamu sudah menyelesaikan semua kegiatan belajar. Ingat, hak dan kewajiban harus seimbang.';
+    $('#thanks').hidden=false;
+    burst($('#thanks'),12);
+    $('#thanks').style.position='relative';
+    try{$('#thanks').scrollIntoView({block:'center',behavior:'smooth'})}catch(e){}
+  });
+  $('#restart').addEventListener('click',function(){
+    act={i:0,score:0,tried:false,busy:false,hak:0,kew:0,done:false};
+    $('#act-end').hidden=true; $('#act-play').hidden=false; actRender();
+    quiz={i:0,score:0,wrong:[],done:false,answered:false};
+    $('#q-play').hidden=true; $('#q-result').hidden=true; $('#q-intro').hidden=false;
+    $('#thanks').hidden=true; $('#feelmsg').textContent='';
+    $$('.feel').forEach(function(x){x.setAttribute('aria-pressed','false')});
+    $$('.checks input').forEach(function(x){x.checked=false});
+    $('#belajar').value=''; visited={0:true}; showTab(0); go(0);
+  });
+
+  go(0);
+})();
+</script>
+
+</body></html>
